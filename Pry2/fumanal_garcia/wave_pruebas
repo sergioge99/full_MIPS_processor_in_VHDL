@@ -1,0 +1,60 @@
+onerror {resume}
+quietly WaveActivateNextPane {} 0
+add wave -noupdate -color White /testbench/uut/clk
+add wave -noupdate -group cont /testbench/uut/ciclos
+add wave -noupdate -group cont /testbench/uut/paradas_control
+add wave -noupdate -group cont /testbench/uut/paradas_datos
+add wave -noupdate -group cont /testbench/uut/paradas_memoria
+add wave -noupdate -group cont /testbench/uut/mem_reads
+add wave -noupdate -group cont /testbench/uut/mem_writes
+add wave -noupdate -color White /testbench/uut/PC_out
+add wave -noupdate -color White /testbench/uut/IR_ID
+add wave -noupdate -group Data /testbench/uut/Banco_MEM_WB/MDR
+add wave -noupdate -group Data -color White /testbench/uut/Register_bank/reg_file
+add wave -noupdate -group Data /testbench/uut/Mem_D/controlador_MD/MD/RAM
+add wave -noupdate -group Data /testbench/uut/Mem_D/MC/MC_data
+add wave -noupdate -color {Cornflower Blue} /testbench/uut/Mem_D/ADDR
+add wave -noupdate -color {Cornflower Blue} /testbench/uut/Mem_D/Din
+add wave -noupdate -color {Cornflower Blue} /testbench/uut/Mem_D/Dout
+add wave -noupdate /testbench/uut/Banco_EX_MEM/MemRead_MEM
+add wave -noupdate /testbench/uut/Banco_EX_MEM/MemWrite_MEM
+add wave -noupdate -color {Cornflower Blue} /testbench/uut/Mem_D/Mem_ready
+add wave -noupdate -color {Cornflower Blue} /testbench/uut/Mem_D/MC/Unidad_Control/hit
+add wave -noupdate /testbench/uut/Mem_D/MC/rm
+add wave -noupdate /testbench/uut/Mem_D/MC/wm
+add wave -noupdate /testbench/uut/Mem_D/MC/wh
+add wave -noupdate -color Salmon /testbench/uut/Mem_D/MC/Unidad_Control/state
+add wave -noupdate -color Salmon /testbench/uut/Mem_D/MC/Unidad_Control/MC_RE
+add wave -noupdate -color Salmon /testbench/uut/Mem_D/MC/Unidad_Control/MC_WE
+add wave -noupdate -color Salmon /testbench/uut/Mem_D/MC/MC_Tags_WE
+add wave -noupdate /testbench/uut/Mem_D/MC/dir_palabra
+add wave -noupdate /testbench/uut/Mem_D/MC/palabra_UC
+add wave -noupdate /testbench/uut/Mem_D/MC/block_addr
+add wave -noupdate /testbench/uut/Mem_D/MC/Unidad_Control/mux_origen
+add wave -noupdate -color Magenta /testbench/uut/Mem_D/controlador_MD/Bus_AD
+add wave -noupdate -color Magenta /testbench/uut/Mem_D/MC/Bus_TRDY
+add wave -noupdate -group Bus -color Magenta /testbench/uut/Mem_D/MC/Bus_DevSel
+add wave -noupdate -group Bus -color Magenta /testbench/uut/Mem_D/controlador_MD/MD_Bus_DEVsel
+add wave -noupdate -group Bus -color Magenta /testbench/uut/Mem_D/controlador_MD/MD_Bus_TRDY
+add wave -noupdate -group Bus -color Magenta /testbench/uut/Mem_D/controlador_MD/bus_Rd_Wr
+add wave -noupdate -group Bus -color Magenta /testbench/uut/Mem_D/controlador_MD/Bus_Frame
+add wave -noupdate -group Bus -color Magenta /testbench/uut/Mem_D/controlador_MD/MEM_WE
+add wave -noupdate -group Bus -color Magenta /testbench/uut/Mem_D/controlador_MD/memoria_preparada
+TreeUpdate [SetDefaultTree]
+WaveRestoreCursors {{Cursor 1} {28 ns} 0}
+quietly wave cursor active 1
+configure wave -namecolwidth 313
+configure wave -valuecolwidth 103
+configure wave -justifyvalue left
+configure wave -signalnamewidth 0
+configure wave -snapdistance 10
+configure wave -datasetprefix 0
+configure wave -rowmargin 4
+configure wave -childrowmargin 2
+configure wave -gridoffset 0
+configure wave -gridperiod 1
+configure wave -griddelta 40
+configure wave -timeline 0
+configure wave -timelineunits ns
+update
+WaveRestoreZoom {38 ns} {242 ns}

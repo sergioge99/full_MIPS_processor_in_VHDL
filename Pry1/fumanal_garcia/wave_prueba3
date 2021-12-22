@@ -1,0 +1,33 @@
+onerror {resume}
+quietly WaveActivateNextPane {} 0
+add wave -noupdate /testbench/uut/clk
+add wave -noupdate /testbench/uut/PC_out
+add wave -noupdate /testbench/uut/IR_ID
+add wave -noupdate /testbench/uut/PCSrc
+add wave -noupdate /testbench/uut/Z
+add wave -noupdate /testbench/uut/Branch
+add wave -noupdate /testbench/uut/Branch_new
+add wave -noupdate /testbench/uut/IR_bancoID_in
+add wave -noupdate /testbench/uut/saltar
+add wave -noupdate /testbench/uut/predictor_error
+add wave -noupdate /testbench/uut/prediction
+add wave -noupdate /testbench/uut/prediction_ID
+add wave -noupdate /testbench/uut/Register_bank/reg_file
+TreeUpdate [SetDefaultTree]
+WaveRestoreCursors {{Cursor 1} {425 ns} 0}
+quietly wave cursor active 1
+configure wave -namecolwidth 196
+configure wave -valuecolwidth 100
+configure wave -justifyvalue left
+configure wave -signalnamewidth 0
+configure wave -snapdistance 10
+configure wave -datasetprefix 0
+configure wave -rowmargin 4
+configure wave -childrowmargin 2
+configure wave -gridoffset 0
+configure wave -gridperiod 1
+configure wave -griddelta 40
+configure wave -timeline 0
+configure wave -timelineunits ns
+update
+WaveRestoreZoom {1124 ns} {1204 ns}

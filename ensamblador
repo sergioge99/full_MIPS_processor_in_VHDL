@@ -1,0 +1,12 @@
+mov 7,r0
+mov 5,r1
+mov 5,r2
+mov 8,r3
+mov 4,r4
+mov 4,r5
+add r0,r1,r6
+add r6,r2,r6
+add r6,r3,r6
+add r6,r4,r6
+add r6,r5,r6
+
